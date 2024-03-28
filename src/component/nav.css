@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+}
+
+.link {
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    animation: slide 0.3s ease-in-out forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons svg {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
