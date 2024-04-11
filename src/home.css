@@ -1,124 +1,122 @@
-@font-face {
-    font-family: curs;
-    src: url(../AbhayaLibre-Regular.ttf);
+body {
+    background-color: #151515;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* width */
+.proj-cont::-webkit-scrollbar {
+    width: 20px;
+    height: 5px;
 }
 
-@font-face {
-    font-family: cursb;
-    src: url(../AbhayaLibre-ExtraBold.ttf);
+/* Track */
+.proj-cont::-webkit-scrollbar-track {
 }
 
-.main-content {
-    width: 100vw;
-    height: 90vh;
-    overflow: hidden;
-}
-
-.img {
-    position: relative;
-    background-image: url(../Grey\ minimalist\ business\ project\ presentation\ .png);
-    background-size: cover;
-    background-position: center;
-}
-
-.left-content {
-    position: absolute;
-    top: 35%;
-    left: 3%;
-    transform: translateY(-50%);
-}
-
-.main-sub {
-    margin-bottom: 0;
-    font-family: sans-serif;
-    font-weight: 100;
-    font-size: 1.1rem;
-}
-
-.big-title {
-    font-size: 9rem;
-    margin-top: 0;
-    color: #CB3322;
-    margin-bottom: 0;
-    font-family: cursb;
-    font-weight: bolder;
-}
-
-.main-info {
-    width: 45%;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-family: sans-serif;
-    font-weight: lighter;
-    font-size: 1.1rem;
-    color: #080808;
-}
-
-.custom-button {
-    border: 2px solid #CB3322;
+/* Handle */
+.proj-cont::-webkit-scrollbar-thumb {
+    background: rgb(234, 234, 234);
     border-radius: 10px;
-    padding: 10px 20px;
-    background: none;
-    color: #CB3322;
-    cursor: pointer;
-    outline: none;
-    display: none;
+    height: 2px;
 }
 
-.work-section {
-    position: absolute;
-    bottom: 20px;
-    left: 3%;
+/* Handle on hover */
+.proj-cont::-webkit-scrollbar-thumb:hover {
+    background: rgb(234, 234, 234);
 }
-
-.work-section h2 {
-    color: black;
+.ee{
+    height: 20000px;
+    content: "e";
+    background-color: #151515;
+    z-index: 10;
 }
-
-.work-section h3 {
-    color: red;
-    font-size: .8rem;
+.container {
+    position: relative;
 }
-
-.work-boxes {
-    display: flex;
+.text-section h2{
+    font-size: 40px;
+    margin-bottom: 0;
 }
-
-.work-box {
-    width: 225px;
-    height: 150px;
-    border: 5px solid rgb(205, 205, 205);
-    margin-right: 10px;
+.text-section button{
+    padding: 10px 30px;
+    border: 2px solid #6880FF;
+    color: #6880FF;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #151515;
+    border-radius: 2px;
 }
-
-#one {
-    background-image: url(../aa\ front.PNG);
-    background-position: center;
-    background-size: cover;
-}
-
-#two {
-    background-image: url(../Turbo.png);
-    background-position: center;
-    background-size: cover;
-}
-
-#three {
-    background-image: url(../unwa.PNG);
-    background-position: center;
-    background-size: cover;
-}
-
-.picture {
+.bottom-left-image {
     position: fixed;
-    bottom: 0%;
-    right: 10%;
-    /* Adjust the width and height of the image as needed */
+    width: 40%;
+    /* Adjust as needed */
+    height: auto;
+    /* Adjust as needed */
+    z-index: 999;
+    /* Ensure the image stays on top */
 }
 
-.picture img {
-    width: 500px;
-    /* Adjust the width of the image */
-    height: auto;
-    /* Maintain aspect ratio */
+.content {
+    margin-left: 120px;
+    /* Adjust this value to leave space for the image */
+}
+
+.scrollable-text {
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    right: 10px;
+    /* Adjust to leave space from the right wall */
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    /* Adjust as needed */
+}
+.scrollable-text p{
+    width: 600px;
+}
+.text-section {
+    /* Adjust as needed */
+    /* Adjust as needed */
+    color: #ccc;
+    /* Add border for separation */
+    padding: 10px;
+    /* Add padding for spacing */
+    margin-bottom: 20px;
+    /* Adjust spacing between text sections */
+
+}
+.proj-cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    border-radius: 10px;
+    overflow-x: auto;
+    max-width: 800px;
+}
+.boxer{
+    min-width: 300px;
+    height: 200px;
+    background-color: #6880FF;
+    border-radius: 10px;
+    border-bottom: 5px solid #151515;
+    
+}
+#first-box{
+    background-image: url(./aa.PNG);
+    background-position: center;
+    background-size: cover;
+}
+#second-box {
+    background-image: url(./unwa.PNG);
+    background-position: center;
+    background-size: cover;
+}
+#first-box {
+    background-image: url(./aa.PNG);
+    background-position: center;
+    background-size: cover;
 }
