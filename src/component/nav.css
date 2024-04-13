@@ -9,8 +9,8 @@
     /* Occupy the full width of the viewport */
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(#151515, #151515de, #15151582, #15151500);
     align-items: center;
-    background-color: transparent;
     color: white;
     padding: 20px;
     z-index: 999;
@@ -38,7 +38,7 @@
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: white;
+    background-color: #6880FF;
     animation: slide 0.3s ease-in-out forwards;
 }
 
