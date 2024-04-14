@@ -11,7 +11,9 @@ const App = () => {
     <Navbar />
     <div className='headdiv'></div>
     <div className="container">
+      <div className='img-cont'>
       <img src={me} className="bottom-left-image" alt="Bottom Left Image" />
+      </div>
       <div className="content">
         {/* Text sections that will scroll on the right side */}
         <div className="scrollable-text">

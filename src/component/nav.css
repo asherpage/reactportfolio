@@ -9,7 +9,7 @@
     /* Occupy the full width of the viewport */
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(#151515, #151515de, #15151582, #15151500);
+    background-image: linear-gradient(#151515, #151515f0, #151515b7, #15151500);
     align-items: center;
     color: white;
     padding: 20px;

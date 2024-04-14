@@ -161,4 +161,35 @@ p span{
     transition: .4s;
     cursor: pointer;
 }
+@media screen and (max-width: 425px) {
+    body {
+    }
+    .img-cont{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+        .bottom-left-image {
+            position: relative;
+            width: 100%;
+            /* Adjust as needed */
+            height: auto;
+            /* Adjust as needed */
+            z-index: 999;
+            /* Ensure the image stays on top */
+        }
+                .scrollable-text {
+                    position: relative;
+                    width: 100%;
 
+                }
+                .scrollable-text p{
+                    width: 100%;
+                }
+                .content{
+                    margin-left: 0;
+                    padding: 10px 20px;
+                }
+}
