@@ -16,9 +16,12 @@
     z-index: 999;
     /* Ensure the navbar stays above other content */
 }
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo {background-image: url(../6880FF__1_-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    margin: 0;
 }
 
 .links {
