@@ -19,7 +19,8 @@ const App = () => {
         <div className="scrollable-text">
           <div className="text-section">
             <h2>Why Me</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum culpa fugiat natus facilis illum minus temporibus corporis exercitationem impedit, doloribus, dolores doloremque, numquam asperiores quasi magni? Est vitae dolor ex aliquam quas adipisci error recusandae delectus? Magnam nulla porro dicta, praesentium accusantium corrupti voluptatum illo sint maiores id iste sunt.</p>
+            <p>I am a aspiring front end developer seeking an opportunity at an entry-level position to showcase my team oriented and graphic design skills. Motivated and eager to provide my expertise in the world of front end development.
+</p>
             <button>Contact Me</button>
           </div>
           <div className="text-section">
@@ -33,18 +34,20 @@ const App = () => {
               </div>
           </div>
           <div className="text-section">
-            
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum culpa fugiat natus facilis illum minus temporibus corporis exercitationem impedit, doloribus, dolores doloremque, numquam asperiores quasi magni? Est vitae dolor ex aliquam quas adipisci error recusandae delectus? Magnam nulla porro dicta, praesentium accusantium corrupti voluptatum illo sint maiores id iste sunt.</p>
             <h2>Skills</h2>
             {/* <div className='scripts-flex'>            <FaHtml5 className='scripts' /><FaCss3Alt className='scripts' /><IoLogoJavascript className='scripts' /></div> */}
             <p>As a developer, my expertise lies primarily in front-end development, where I thrive in crafting intuitive and visually appealing user interfaces. Proficient in HTML, CSS, and JavaScript, I bring designs to life with clean, efficient code. My dedication to staying updated with the latest trends and technologies ensures that my projects are not only functional but also cutting-edge in terms of design and user experience. Whether it's creating responsive layouts, implementing animations, or optimizing performance, I am committed to delivering high-quality solutions that exceed expectations.</p><p>Explore my <span>GitHub</span> to see examples of my projects and to gain deeper insights into my skills and coding style.</p>
             <p className='script-tags'><span>JavaScript</span> <span>TypeScript</span> <span>HTML</span> <span>CSS & SCSS</span> <span>Next.js</span> <span>React</span></p>
             
-            <h2>Why Me</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum culpa fugiat natus facilis illum minus temporibus corporis exercitationem impedit, doloribus, dolores doloremque, numquam asperiores quasi magni? Est vitae dolor ex aliquam quas adipisci error recusandae delectus? Magnam nulla porro dicta, praesentium accusantium corrupti voluptatum illo sint maiores id iste sunt.</p>
-            <h2>Why Me</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum culpa fugiat natus facilis illum minus temporibus corporis exercitationem impedit, doloribus, dolores doloremque, numquam asperiores quasi magni? Est vitae dolor ex aliquam quas adipisci error recusandae delectus? Magnam nulla porro dicta, praesentium accusantium corrupti voluptatum illo sint maiores id iste sunt.</p>
+            <h2>Education</h2>
+            <p className='p-head'>Sandra Day O’Conner Highschool, Phoenix</p>
+              <p className='p-sub'>Expected Grad: 2024</p>
+
+            <p className='p-head'>West-MEC NEC Coding Program, Phoenix</p>
+            <p className='filler'>This two-year interactive program prepares students for a career as a software developer. The program teaches students how to design and develop software, build apps for phones, tablets, websites, and write and test computer code.</p>
+              <p className='p-sub'>Expected Grad: 2024</p>
+            <h2>Extracuricular</h2>
+            <p className='filler'>Develop professional and entrepreneurial skills while working as a       team to coordinate and implement volunteer and work-based learning experiences.</p>
           </div>
           
           {/* Add more text sections as needed */}

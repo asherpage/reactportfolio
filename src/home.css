@@ -12,7 +12,17 @@ body {
     width: 20px;
     height: 5px;
 }
-
+.p-sub{
+    color: #6d6d6d;
+    margin: 5px 0 0 0;
+}
+.filler{
+    margin: 0;
+}
+.p-head{
+    font-weight: bold;
+    margin-bottom: 0;
+}
 /* Track */
 .proj-cont::-webkit-scrollbar-track {
 }
@@ -50,6 +60,7 @@ body {
     background-color: #151515;
     border-radius: 1px;
 }
+
 .bottom-left-image {
     position: fixed;
     width: 40%;
