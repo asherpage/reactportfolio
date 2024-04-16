@@ -62,29 +62,32 @@ body {
 }
 
 .bottom-left-image {
-    position: fixed;
-    width: 40%;
+    position: sticky;
+    top:12%;
+    width: 100%;
     /* Adjust as needed */
     height: auto;
     /* Adjust as needed */
-    z-index: 999;
+    z-index: 0;
     /* Ensure the image stays on top */
 }
 
 .content {
-    margin-left: 120px;
+    margin-left: 20px;
+    width: 50%;
     /* Adjust this value to leave space for the image */
+}
+.flexy{
+    display: flex;
+    justify-content: space-between;
 }
 
 .scrollable-text {
-    position: absolute;
     top: 0%;
-    margin-top: 5%;
-    width: 50%;
+    margin-top: 10%;
+    width: 100%;
     right: 10px;
     /* Adjust to leave space from the right wall */
-    max-height: 100vh;
-    height: 100vh;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -102,6 +105,7 @@ body {
     /* Add padding for spacing */
     margin-bottom: 20px;
     /* Adjust spacing between text sections */
+    width: 100%;
 
 }
 .proj-cont {
@@ -111,10 +115,11 @@ body {
     gap: 5px;
     border-radius: 10px;
     overflow-x: auto;
+    min-width: 80%;
     max-width: 800px;
 }
 .boxer{
-    min-width: 300px;
+    min-width: 40%;
     height: 200px;
     background-color: #6880FF;
     border-radius: 10px;
@@ -172,12 +177,66 @@ p span{
     transition: .4s;
     cursor: pointer;
 }
-/* .below-scroll{
-    height: 5000px;
-    width: 100%;
+.bigger-container {
+    background-color: #141414;
+    overscroll-behavior: none;
+    -ms-overflow-style: none;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    top: 0;
     z-index: 9999;
+}
+
+.scroll-container {
+    
+    will-change: transform;
+}
+
+.scroll-container .ghost {
+    width: 100vw;
+}
+
+.thumbnails-container {
+    position: relative;
+    height: 100vh;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 0px 160px;
+    background-color: #141414;
+    border: 40px solid yellowgreen;
+}
+
+.thumbnails-container .thumbnails {
+    position: relative;
+    display: flex;
+    border: 20px solid yellow;
+}
+
+.thumbnails-container .thumbnails>*:not(:last-child) {
+    margin-right: 45px;
+}
+
+.thumbnails-container .thumbnails .thumbnail {
+    height: 40vh;
+    width: 700px;
+    background-color: royalblue;
+    border: 15px solid magenta;
+}
+.big-di{
+}
+.img-cont {
+    width: 40%;
+}
+.below-scroll{
+    height: fit-content;
+    width: 100%;
+    z-index: 1;
     background-color: #6880FF;
-} */
+}
 @media screen and (max-width: 425px) {
     body {
     }
@@ -194,7 +253,7 @@ p span{
             /* Adjust as needed */
             height: auto;
             /* Adjust as needed */
-            z-index: 999;
+            z-index: 0;
             /* Ensure the image stays on top */
         }
                 .scrollable-text {
