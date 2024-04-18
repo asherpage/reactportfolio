@@ -1,5 +1,9 @@
-
+@font-face {
+    font-family: calm;
+    src: url(../../Poppins-Regular.ttf);
+}
 * {
+    font-family: calm;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +33,7 @@
 }
 
 .contact-form {
-    background-color: #5c71dd;
+    background-color: #6880FF;
     position: relative;
 }
 
@@ -58,7 +62,7 @@
     position: absolute;
     width: 26px;
     height: 26px;
-    background-color: #5c71dd;
+    background-color: #6880FF;
     transform: rotate(45deg);
     top: 50px;
     left: -13px;
@@ -72,8 +76,8 @@ form {
 }
 
 .title {
-    color: #fff;
-    font-weight: 500;
+    color: #171925;
+    font-weight: 800;
     font-size: 1.5rem;
     line-height: 1;
     margin-bottom: 0.7rem;
@@ -87,10 +91,9 @@ form {
 .input {
     width: 100%;
     outline: none;
-    border: 2px solid #fafafa;
-    background: none;
+    border: none;
+    background: #171925;
     padding: 0.6rem 1.2rem;
-    color: #fff;
     font-weight: 500;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
@@ -112,7 +115,7 @@ textarea.input {
     left: 15px;
     transform: translateY(-50%);
     padding: 0 0.4rem;
-    color: #fafafa;
+    color: #6880FF;
     font-size: 0.9rem;
     font-weight: 400;
     pointer-events: none;
@@ -127,8 +130,7 @@ textarea.input {
 
 .btn {
     padding: 0.6rem 1.3rem;
-    background-color: #fff;
-    border: 2px solid #fafafa;
+    background-color: #171925;
     font-size: 0.95rem;
     color: #6880FF;
     line-height: 1;
@@ -165,7 +167,7 @@ textarea.input {
     opacity: 0;
     transition: 0.3s;
     height: 5px;
-    background-color: #6880FF;
+    background-color: #ebebeb;
     top: 50%;
     transform: translateY(-50%);
 }
