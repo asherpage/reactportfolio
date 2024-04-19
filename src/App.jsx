@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from'./component/Navbar.jsx'
-import SmoothScroll from './component/SmoothScroller.jsx'
+import SmoothScroller from './component/SmoothScroller.jsx'
 import './home.css'
 import ContactForm from './component/ContactForm.jsx'
 import me from './new.PNG'
@@ -38,6 +38,15 @@ const App = () => {
             <h2>Skills</h2>
             <p>As a developer, my expertise lies primarily in front-end development, where I thrive in crafting intuitive and visually appealing user interfaces. Proficient in HTML, CSS, and JavaScript, I bring designs to life with clean, efficient code. My dedication to staying updated with the latest trends and technologies ensures that my projects are not only functional but also cutting-edge in terms of design and user experience. Whether it's creating responsive layouts, implementing animations, or optimizing performance, I am committed to delivering high-quality solutions that exceed expectations.</p><p>Explore my <span>GitHub</span> to see examples of my projects and to gain deeper insights into my skills and coding style.</p>
             <p className='script-tags'><span>JavaScript</span> <span>TypeScript</span> <span>HTML</span> <span>CSS & SCSS</span> <span>Next.js</span> <span>React</span></p>
+
+            <h2 className='lil-titles'>Work</h2>
+            <p className='p-head'>Mr. Shine Car Wash , Peoria, AZ — Crew Member</p>
+            <p className='Filler'>
+Support teammates to maintain efficient service in a fast-paced environment
+great at communicating with customers 
+Process payments with accuracy
+Maintain facility to cleanliness and safety standards
+</p>
             
             <h2 className='lil-titles'>Education</h2>
             <p className='p-head'>Sandra Day O’Conner Highschool, Phoenix</p>
@@ -54,7 +63,9 @@ const App = () => {
       </div>
 
     </div>
-          <div className='below-scroll'></div>
+          <div className='below-scroll'>
+            <SmoothScroller />
+          </div>
           <ContactForm />
     </>
   )

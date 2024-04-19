@@ -39,7 +39,7 @@
 
 .circle {
     border-radius: 50%;
-    background: linear-gradient(135deg, transparent 20%, #485ab2);
+    background: linear-gradient(135deg, transparent 20%, #252e5b);
     position: absolute;
 }
 
@@ -131,6 +131,7 @@ textarea.input {
 .btn {
     padding: 0.6rem 1.3rem;
     background-color: #171925;
+    border: none;
     font-size: 0.95rem;
     color: #6880FF;
     line-height: 1;

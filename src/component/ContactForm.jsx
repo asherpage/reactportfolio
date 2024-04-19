@@ -1,44 +1,57 @@
-import React, { useEffect } from "react";
+
+import React, { useEffect, useRef } from "react";
 import "./Contact.css"; // Import your CSS file
 import { FaLinkedin } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
-import { color } from "framer-motion";
+
+const scrollToSmoothly = (targetPosition, duration) => {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  const animation = (currentTime) => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const scrollProgress = Math.min(timeElapsed / duration, 1);
+    const easedProgress = easeOutQuad(scrollProgress);
+    window.scrollTo(0, startPosition + distance * easedProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  };
+
+  const easeOutQuad = (t) => t * (2 - t);
+
+  requestAnimationFrame(animation);
+};
 
 const ContactForm = () => {
+  const contactRef = useRef(null);
+
   useEffect(() => {
-    const inputs = document.querySelectorAll(".input");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const targetPosition = contactRef.current.offsetTop;
+          scrollToSmoothly(targetPosition, 1000); // Adjust duration as needed
+        }
+      },
+      { threshold: 0.0 }
+    );
 
-    function focusFunc() {
-      let parent = this.parentNode;
-      parent.classList.add("focus");
-    }
+    observer.observe(contactRef.current);
 
-    function blurFunc() {
-      let parent = this.parentNode;
-      if (this.value === "") {
-        parent.classList.remove("focus");
-      }
-    }
-
-    inputs.forEach((input) => {
-      input.addEventListener("focus", focusFunc);
-      input.addEventListener("blur", blurFunc);
-    });
-
-    // Cleanup function
     return () => {
-      inputs.forEach((input) => {
-        input.removeEventListener("focus", focusFunc);
-        input.removeEventListener("blur", blurFunc);
-      });
+      observer.disconnect();
     };
   }, []);
 
   return (
-    <div className="contact-container">
+        <div ref={contactRef} className="contact-container">
       <span className="big-circle"></span>
       <img src="img/shape.png" className="square" alt="" />
       <div className="form">
@@ -56,7 +69,7 @@ const ContactForm = () => {
             </div>
             <div className="information">
               <MdEmail style={{color: '#6880FF'}} />
-              <p>lorem@ipsum.com</p>
+              <p>Asher.Page2121@gmail.com</p>
             </div>
             <div className="information">
               <FaPhoneAlt style={{color: '#6880FF'}} />
@@ -71,7 +84,7 @@ const ContactForm = () => {
           <span className="circle two"></span>
 
           <form action="index.html" autoComplete="off">
-            <h3 className="title">Contact us</h3>
+            <h3 className="title">Contact Me</h3>
             <div className="input-container">
               <input type="text" name="name" className="input"/>
               <label htmlFor="">Username</label>
