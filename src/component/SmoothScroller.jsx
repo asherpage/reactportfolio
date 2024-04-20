@@ -16,12 +16,12 @@ const SmoothScroller = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-55%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] backg">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
+        <motion.div style={{ x }} className="flex gap-4" id="gapper">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -33,24 +33,25 @@ const SmoothScroller = () => {
 
 const Card = ({ card }) => {
   return (
-    <div
-      key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden" id="carder"
-    >
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110" id="carder"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center" id="carder">
-        <p className="text-6xl uppercase backdrop-blur-lg">
-          {card.title}
-        </p>
-      </div>
-    </div>
+<div
+  key={card.id}
+  className="group relative h-[450px] w-[1000px] overflow-hidden" id="carder"
+>
+  <div
+    className="absolute left-0 top-0 h-full w-[60%] z-0" 
+    style={{
+      backgroundImage: `url(${card.url})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  ></div>
+  <div className="absolute right-0 top-0 h-full w-[40%] z-10 flex flex-col justify-flex-start p-8">
+    <h2 className="text-3xl font-bold text-white">{card.title}</h2>
+    <p className="text-white mt-4">{card.description}</p>
+    <button className="mt-4 px-4 py-2 rounded-md bg-blue-500 text-white w-[40%]" id="button-view">View Project</button>
+  </div>
+</div>
+
   );
 };
 
@@ -58,8 +59,9 @@ export default Example;
 
 const cards = [
   {
-    url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
+    url: require("../aa.PNG"),
+    title: "A&A Transport",
+    description:"This website i made for my FBLA website coding and development project provides a seamless experience for customers looking to transport their cars safely and securely. With a user-friendly interface and intuitive navigation, you can easily request a quote, track your shipment, and stay updated throughout the entire process.",
     id: 1,
   },
   {
@@ -71,25 +73,5 @@ const cards = [
     url: "/imgs/abstract/3.jpg",
     title: "Title 3",
     id: 3,
-  },
-  {
-    url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
-    id: 4,
-  },
-  {
-    url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
-    id: 5,
-  },
-  {
-    url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
-    id: 6,
-  },
-  {
-    url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 7,
-  },
+  }
 ];

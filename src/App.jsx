@@ -22,7 +22,7 @@ const App = () => {
             <h2>Why Me</h2>
             <p>I am a aspiring front end developer seeking an opportunity at an entry-level position to showcase my team oriented and graphic design skills. Motivated and eager to provide my expertise in the world of front end development.
 </p>
-            <button>Contact Me</button>
+            <a href='#contacter'><button>Contact Me</button></a>
           </div>
           <div className="text-section">
             <h2>Latest work</h2>
@@ -66,7 +66,7 @@ Maintain facility to cleanliness and safety standards
           <div className='below-scroll'>
             <SmoothScroller />
           </div>
-          <ContactForm />
+          <ContactForm id="contacter"/>
     </>
   )
 }

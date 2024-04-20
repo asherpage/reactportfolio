@@ -64,12 +64,11 @@ body {
     border-radius: 1px;
     transition: .3s;
 }
-.text-section button:hover{
-    transition: .3s;
-    background-color: #6880FF;
-    color: #151515;
-    box-shadow: 0 0 5px #6880FF;
-    font-weight: 900;
+
+.text-section button:hover,
+.text-section button:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em #6880FF;
+    transform: translateY(-0.25em);
 }
 .img-cont {
     width: 50%;
@@ -85,8 +84,8 @@ body {
 }
 
 .content {
-    margin-left: 20px;
-    width: 40%;
+    margin-left: 10%;
+    width: 45%;
     margin-top: 5%;
     /* Adjust this value to leave space for the image */
 }
@@ -193,7 +192,10 @@ p span{
     cursor: pointer;
 }
 .lil-titles{
-    margin-top: 3%;
+    margin-top: 5%;
+}
+p{
+    line-height: 1.4;
 }
 .big-di{
 }
