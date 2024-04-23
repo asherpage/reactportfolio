@@ -16,7 +16,7 @@ const SmoothScroller = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-55%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-65%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] backg">
@@ -59,19 +59,21 @@ export default Example;
 
 const cards = [
   {
-    url: require("../aa.PNG"),
+    url: require("../newski.PNG"),
     title: "A&A Transport",
     description:"This website i made for my FBLA website coding and development project provides a seamless experience for customers looking to transport their cars safely and securely. With a user-friendly interface and intuitive navigation, you can easily request a quote, track your shipment, and stay updated throughout the entire process.",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
+    url: require("../sliders.PNG"),
+    title: "Turbo rush",
+    description:"Turbo Rush is an infinite top-down racing game that thrills players with high-speed action in futuristic cityscapes. With dynamically generated tracks and turbocharged vehicles, each race offers a unique challenge. Players must navigate obstacles, execute daring maneuvers, and use turbo boosts strategically to outpace rivals. Multiplayer mode amps up the intensity, allowing for head-to-head duels and global competitions. With stunning visuals and an adrenaline-pumping soundtrack, Turbo Rush delivers an unforgettable racing experience.",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
+    url: require("../blackerrr.avif"),
     title: "Title 3",
+    description:"Turbo Rush is an infinite top-down racing game that thrills players with high-speed action in futuristic cityscapes. With dynamically generated tracks and turbocharged vehicles, each race offers a unique challenge. Players must navigate obstacles, execute daring maneuvers, and use turbo boosts strategically to outpace rivals. Multiplayer mode amps up the intensity, allowing for head-to-head duels and global competitions. With stunning visuals and an adrenaline-pumping soundtrack, Turbo Rush delivers an unforgettable racing experience.",
     id: 3,
   }
 ];

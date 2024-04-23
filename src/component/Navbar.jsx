@@ -34,11 +34,11 @@ const Navbar = () => {
           className={`link ${activeTab === 1 ? 'active' : ''}`}
           onClick={() => setActiveTab(1)}
         >
-          About
+          Resume
         </div>
         <div
           className={`link ${activeTab === 2 ? 'active' : ''}`}
-          onClick={() => setActiveTab(2)}
+          onClick={() => setActiveTab(2)} 
         >
           Contact
         </div>

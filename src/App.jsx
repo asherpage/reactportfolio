@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Navbar from'./component/Navbar.jsx'
 import SmoothScroller from './component/SmoothScroller.jsx'
 import './home.css'
@@ -8,6 +8,13 @@ import { FaHtml5 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaCss3Alt } from "react-icons/fa";
 const App = () => {
+  const contactFormRef = useRef(null);
+
+  const scrollToContactForm = () => {
+    contactFormRef.current.scrollIntoView({ behavior: 'smooth'});
+
+  };
+
   return (
     <>
     <Navbar />
@@ -22,7 +29,7 @@ const App = () => {
             <h2>Why Me</h2>
             <p>I am a aspiring front end developer seeking an opportunity at an entry-level position to showcase my team oriented and graphic design skills. Motivated and eager to provide my expertise in the world of front end development.
 </p>
-            <a href='#contacter'><button>Contact Me</button></a>
+            <button onClick={scrollToContactForm}>Contact Me</button>
           </div>
           <div className="text-section">
             <h2>Latest work</h2>
@@ -66,7 +73,9 @@ Maintain facility to cleanliness and safety standards
           <div className='below-scroll'>
             <SmoothScroller />
           </div>
-          <ContactForm id="contacter"/>
+           <div ref={contactFormRef}>
+        <ContactForm />
+      </div>
     </>
   )
 }

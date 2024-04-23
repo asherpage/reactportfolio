@@ -71,11 +71,11 @@ body {
     transform: translateY(-0.25em);
 }
 .img-cont {
-    width: 50%;
+    width: 40%;
 }
 .bottom-left-image {
     position: sticky;
-    top:9%;
+    top:12%;
     width: 100%;
     height: auto;
     /* Adjust as needed */
@@ -208,6 +208,9 @@ p{
 }
 @media screen and (max-width: 425px) {
     body {
+    }
+    .flexy{
+        flex-direction: column;
     }
     .img-cont{
         width: 100%;
