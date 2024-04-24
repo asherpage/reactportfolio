@@ -30,12 +30,14 @@ const Navbar = () => {
         >
           Home
         </div>
+        <a href='/resume' >
         <div
           className={`link ${activeTab === 1 ? 'active' : ''}`}
           onClick={() => setActiveTab(1)}
         >
           Resume
         </div>
+        </a>
         <div
           className={`link ${activeTab === 2 ? 'active' : ''}`}
           onClick={() => setActiveTab(2)} 

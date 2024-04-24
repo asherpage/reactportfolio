@@ -16,7 +16,7 @@ const SmoothScroller = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-65%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-80%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] backg">
@@ -38,14 +38,14 @@ const Card = ({ card }) => {
   className="group relative h-[450px] w-[1000px] overflow-hidden" id="carder"
 >
   <div
-    className="absolute left-0 top-0 h-full w-[60%] z-0" 
+    className="absolute left-0 top-0 h-full w-[60%] z-0" id="iamge"
     style={{
       backgroundImage: `url(${card.url})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
   ></div>
-  <div className="absolute right-0 top-0 h-full w-[40%] z-10 flex flex-col justify-flex-start p-8">
+  <div className="absolute right-0 top-0 h-full w-[40%] z-10 flex flex-col justify-flex-start p-8" id="text-width">
     <h2 className="text-3xl font-bold text-white">{card.title}</h2>
     <p className="text-white mt-4">{card.description}</p>
     <button className="mt-4 px-4 py-2 rounded-md bg-blue-500 text-white w-[40%]" id="button-view">View Project</button>
@@ -72,7 +72,7 @@ const cards = [
   },
   {
     url: require("../blackerrr.avif"),
-    title: "Title 3",
+    title: "Blackjack",
     description:"Turbo Rush is an infinite top-down racing game that thrills players with high-speed action in futuristic cityscapes. With dynamically generated tracks and turbocharged vehicles, each race offers a unique challenge. Players must navigate obstacles, execute daring maneuvers, and use turbo boosts strategically to outpace rivals. Multiplayer mode amps up the intensity, allowing for head-to-head duels and global competitions. With stunning visuals and an adrenaline-pumping soundtrack, Turbo Rush delivers an unforgettable racing experience.",
     id: 3,
   }

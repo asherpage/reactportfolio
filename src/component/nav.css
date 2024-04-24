@@ -65,3 +65,35 @@
     margin-left: 10px;
     cursor: pointer;
 }
+@media screen and (max-width: 426px) {
+    .links {
+            display: flex;
+            width: 2px;
+            font-size: 12px;
+        }
+    
+        .link {
+            cursor: pointer;
+            position: relative;
+            margin-right: 10px;
+        }
+                .logo {
+                    background-image: url(../6880FF__1_-removebg-preview.png);
+                    background-position: center;
+                    background-size: cover;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0;
+                }
+                                .social-icons {
+                                    display: flex;
+                                    align-items: center;
+                                    display: none;
+                                }
+                                                                .social-icons svg {
+                                                                    font-size: 20px;
+                                                                    margin-left: 10px;
+                                                                    cursor: pointer;
+                                                                    display: none;
+                                                                }
+}
